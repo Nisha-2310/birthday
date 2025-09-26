@@ -1,0 +1,206 @@
+body {
+  margin: 20px;
+  background-image: url("birthbg.webp");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  font-family: cursive;
+}
+
+.balloon-container{
+    position: relative;
+
+}
+
+.balloon {
+  display: inline-block;
+  width: 78px;
+  height: 88px;
+  border-radius: 80%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+  transition: transform 0.5s ease;
+  z-index: 10;
+  transform-origin: bottom center;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+}
+/* Different groups of balloons */
+.balloon1 {
+  font-size: 58px;
+  animation: balloons1 5s linear forwards;
+}
+
+.balloon2 {
+  font-size: 48px;
+  animation: balloons2 6s linear forwards;
+  top: -94px;
+}
+
+.balloon3 {
+  font-size: 38px;
+  animation: balloons3 7s linear forwards;
+  bottom: 187px;
+}
+
+
+/* Keyframes for different styles */
+@keyframes balloons1 {
+  0% {
+    transform: translateY(100vh) rotate3d(1, 1, 1, 0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate3d(1, 1, 1, 360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes balloons2 {
+  0% {
+    transform: translateY(100vh) rotate3d(0, 1, 1, 0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate3d(0, 1, 1, 360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes balloons3 {
+  0% {
+    transform: translateY(100vh) rotate3d(1, 0, 1, 0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate3d(1, 0, 1, 360deg);
+    opacity: 1;
+  }
+}
+
+/* Colors for balloons */
+.balloon1:nth-child(1) {
+  background: rgba(255, 100, 100, 1);
+  animation-duration: 3s;
+}
+
+.balloon1:nth-child(2) {
+  background: rgba(255, 255, 100, 1);
+  animation-duration: 4s;
+}
+
+.balloon1:nth-child(3) {
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  animation-duration: 5s;
+}
+
+.balloon1:nth-child(4) {
+  background: rgba(0, 200, 255, 1);
+  animation-duration: 4.5s;
+}
+
+.balloon1:nth-child(5) {
+  background: rgba(0, 0, 255, 1);
+  animation-duration: 6s;
+}
+
+/* BIRTH */
+.balloon2:nth-child(1) {
+  background: rgba(0, 255, 150, 1);
+  animation-duration: 5s;
+}
+
+.balloon2:nth-child(2) {
+  background: rgba(200, 100, 255, 1);
+  animation-duration: 6s;
+}
+
+.balloon2:nth-child(3) {
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  animation-duration: 5.5s;
+}
+
+.balloon2:nth-child(4) {
+  background: rgba(0, 255, 255, 1);
+  animation-duration: 7s;
+}
+
+.balloon2:nth-child(5) {
+  background: rgba(255, 0, 150, 1);
+  animation-duration: 4.5s;
+}
+
+/* DAY */
+.balloon3:nth-child(1) {
+  background: rgba(255, 100, 100, 1);
+  animation-duration: 6s;
+}
+
+.balloon3:nth-child(2) {
+  background: rgba(255, 255, 100, 1);
+  animation-duration: 3.5s;
+}
+
+.balloon3:nth-child(3) {
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  animation-duration: 5.5s;
+}
+
+/* On hover balloons disappear */
+.balloon:hover {
+  display: none;
+}
+
+
+
+.btn
+{
+    background: linear-gradient(rgb(17, 128, 232), rgb(6, 5, 49));
+    box-shadow: 5px 1px 3px 2px rgb(79, 159, 205);
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    transition: 0.5s ease;
+    margin-top: 200px;
+}
+
+.btn:hover{
+    background: gray;
+    box-shadow: transparent;
+
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  .balloon-container {
+    gap: 5px;
+  }
+
+  .btn {
+    margin-top: 10vh;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .balloon {
+    width: clamp(40px, 12vw, 60px);
+    height: clamp(50px, 14vw, 70px);
+  }
+
+  .btn {
+    margin-top: 8vh;
+    font-size: 10px;
+  }
+}

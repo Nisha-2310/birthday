@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Birthday Cake</title>
+   <link rel="stylesheet" href="candel.css">
+</head>
+<body>
+  <div class="container">
+    <div class="cake-container" id="cakeContainer">
+      <div class="cake" id="cake">
+        <div id="cakeContainer">
+  <!-- yahan aapka cake, candle, flame etc. hoga -->
+  <div id="stars"></div> <!-- ⭐ Stars container -->
+</div>
+
+
+        <div class="cake-base"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-top"></div>
+        <div class="frosting"></div>
+        <div class="candle" id="candle"></div>
+        <div class="flame" id="flame"></div>
+        <div class="smoke" id="smoke"></div>
+        <div class="click-hint" id="clickHint">
+             
+Click me!</div>
+you
+      </div>
+    </div>
+
+    <div class="birthday-text" id="birthdayText">Happy Birthday Anant!</div>
+
+    <div class="instructions">
+      <p>Click the cake to add a candle</p>
+       
+    </div>
+
+    <div class="status" id="status">Ready to celebrate!</div>
+
+    <div class="action-buttons">
+      <button class="btn reset-btn" id="resetBtn">Reset Cake</button>
+      <button class="btn decorate-btn" id="decorateBtn">Click to Decorate</button>
+      <a href="cards.html"><button class=" nextbtn"> suprise</button></a>
+    </div>
+  </div>
+  
+
+  <audio id="birthdayMusic" src="01-Monk-Turner-Fascinoma-Its-Your-Birthday(chosic.com).mp3"></audio> 
+  <div id="confetti"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
